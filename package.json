@@ -4,9 +4,15 @@
   "description": "World clock showing local time across Sydney, Melbourne, Adelaide, Singapore, Kuala Lumpur and India with a modern Bootstrap UI.",
   "main": "server.js",
   "scripts": {
-    "start": "node server.js"
+    "start": "node server.js",
+    "test": "jest"
   },
   "dependencies": {
     "express": "^4.19.2"
+  },
+  "devDependencies": {
+    "jest": "^30.4.2",
+    "jest-environment-jsdom": "^30.4.1",
+    "supertest": "^7.2.2"
   }
 }
