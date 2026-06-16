@@ -6,6 +6,11 @@ const PORT = process.env.PORT || 3000;
 
 app.use(express.static(path.join(__dirname, 'public')));
 
-app.listen(PORT, () => {
-  console.log(`World Clock running at http://localhost:${PORT}`);
-});
+// Only start listening when run directly, so tests can import the app.
+if (require.main === module) {
+  app.listen(PORT, () => {
+    console.log(`World Clock running at http://localhost:${PORT}`);
+  });
+}
+
+module.exports = app;
