@@ -74,6 +74,21 @@ body {
   font-size: 0.95rem;
 }
 
+.clock-weather {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0.4rem;
+  margin-top: 0.75rem;
+  padding-top: 0.75rem;
+  border-top: 1px solid rgba(128, 128, 128, 0.15);
+}
+
+.weather-emoji {
+  font-size: 1.5rem;
+  line-height: 1;
+}
+
 .clock-day {
   margin-top: 0.25rem;
 }
