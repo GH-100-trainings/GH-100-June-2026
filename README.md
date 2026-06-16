@@ -1,4 +1,5 @@
 [![CI](https://github.com/GH-100-trainings/GH-100-June-2026/actions/workflows/ci.yml/badge.svg)](https://github.com/GH-100-trainings/GH-100-June-2026/actions/workflows/ci.yml)
+[![CD](https://github.com/GH-100-trainings/GH-100-June-2026/actions/workflows/cd.yml/badge.svg)](https://github.com/GH-100-trainings/GH-100-June-2026/actions/workflows/cd.yml)
 
 # World Clock 🌏
 
@@ -143,6 +144,34 @@ npm test
 A successful run ends with something like `Tests: 14 passed`. These same tests
 also run automatically on GitHub every time the code changes (that's the green
 **CI** badge at the top).
+
+---
+
+## Running with Docker (optional)
+
+Every change merged to `main` is automatically built into a Docker image and
+published to the **GitHub Container Registry** by the **CD** workflow. You can
+pull and run that image without installing Node.js yourself:
+
+```pwsh
+docker pull ghcr.io/gh-100-trainings/gh-100-june-2026:latest
+docker run -p 3000:3000 ghcr.io/gh-100-trainings/gh-100-june-2026:latest
+```
+
+To also enable live weather, pass your Azure Maps key:
+
+```pwsh
+docker run -p 3000:3000 -e AZURE_MAPS_KEY=your-key-goes-here ghcr.io/gh-100-trainings/gh-100-june-2026:latest
+```
+
+You can also build the image locally from the included `Dockerfile`:
+
+```pwsh
+docker build -t world-clock .
+docker run -p 3000:3000 world-clock
+```
+
+Then open `http://localhost:3000` as usual.
 
 ---
 
