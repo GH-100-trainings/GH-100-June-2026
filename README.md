@@ -453,7 +453,7 @@ git clone https://github.com/GH-100-trainings/GH-100-June-2026.git
 
 - [Lab 1: Guided Tour of GitHub](https://learn.microsoft.com/en-us/training/modules/introduction-to-github/6-guided-tour-of-github/?ns-enrollment-type=learningpath&ns-enrollment-id=learn.github.github-administration-products-1)
 - [Lab 2: Secure Repository](https://learn.microsoft.com/en-us/training/modules/maintain-secure-repository-github/3-security-strategy-essentials/?ns-enrollment-type=learningpath&ns-enrollment-id=learn.github.github-administration-products-1)
-- Lab 3: Change Commit History
+- [Lab 3: Change Commit History](https://learn.microsoft.com/en-us/training/modules/manage-sensitive-data-security-policies/5-exercise?ns-enrollment-type=learningpath&ns-enrollment-id=learn.github.github-administration-products-2)
 - [Lab 4: Use a repository secret in a GitHub Actions workflow](https://learn.microsoft.com/en-us/training/modules/manage-github-actions-enterprise/exercise/?ns-enrollment-type=learningpath&ns-enrollment-id=learn.github.github-administration-products-2)
 - [Lab 5: Publish to a GitHub Packages registry](https://learn.microsoft.com/en-us/training/modules/github-actions-packages/3-exercise-github-packages-docker-registry/?ns-enrollment-type=learningpath&ns-enrollment-id=learn.github.github-administration-products-2)
 
