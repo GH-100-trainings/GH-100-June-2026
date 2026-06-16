@@ -1,0 +1,83 @@
+:root {
+  --grad-1: #6366f1;
+  --grad-2: #8b5cf6;
+  --grad-3: #ec4899;
+}
+
+body {
+  min-height: 100vh;
+  position: relative;
+}
+
+/* Fixed gradient backdrop that adapts to the active Bootstrap theme. */
+.app-bg {
+  position: fixed;
+  inset: 0;
+  z-index: -1;
+  background: linear-gradient(135deg, var(--grad-1), var(--grad-2), var(--grad-3));
+  background-size: 200% 200%;
+  animation: drift 18s ease infinite;
+  opacity: 0.12;
+}
+
+[data-bs-theme='dark'] .app-bg {
+  opacity: 0.22;
+}
+
+@keyframes drift {
+  0% { background-position: 0% 50%; }
+  50% { background-position: 100% 50%; }
+  100% { background-position: 0% 50%; }
+}
+
+.clock-card {
+  border: 1px solid rgba(128, 128, 128, 0.15);
+  border-radius: 1.25rem;
+  backdrop-filter: blur(6px);
+  background-color: var(--bs-body-bg);
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.08);
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+.clock-card:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 18px 40px rgba(0, 0, 0, 0.16);
+}
+
+.clock-flag {
+  font-size: 2.5rem;
+  line-height: 1;
+  margin-bottom: 0.5rem;
+}
+
+.clock-time {
+  font-family: 'Segoe UI', 'SFMono-Regular', Consolas, 'Liberation Mono', Menlo, monospace;
+  font-variant-numeric: tabular-nums;
+  font-size: clamp(2.25rem, 6vw, 3rem);
+  font-weight: 700;
+  letter-spacing: 0.04em;
+  background: linear-gradient(135deg, var(--grad-1), var(--grad-3));
+  -webkit-background-clip: text;
+  background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+.clock-meta {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0.5rem;
+  margin-top: 0.25rem;
+}
+
+.clock-date {
+  font-size: 0.95rem;
+}
+
+.clock-day {
+  margin-top: 0.25rem;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .app-bg { animation: none; }
+}

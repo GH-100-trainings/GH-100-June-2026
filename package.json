@@ -1,0 +1,12 @@
+{
+  "name": "world-clock",
+  "version": "1.0.0",
+  "description": "World clock showing local time across Sydney, Melbourne, Adelaide, Singapore, Kuala Lumpur and India with a modern Bootstrap UI.",
+  "main": "server.js",
+  "scripts": {
+    "start": "node server.js"
+  },
+  "dependencies": {
+    "express": "^4.19.2"
+  }
+}
